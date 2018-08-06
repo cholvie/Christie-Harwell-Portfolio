@@ -1,10 +1,19 @@
 (function($) {
     "use strict";
      $(document).on('ready', function() {
+
+		// jQuery(window).load(function () {
+		// 	jQuery(".loaded").fadeOut();
+		// 	jQuery(".preloader").delay(1000).fadeOut("slow");
+		// });
 	
         jQuery(window).on('scroll', function() {
 			if ($(this).scrollTop() > 200) {
 				$('#header .header-inner').addClass("sticky");
+
+				jQuery(".loaded").fadeOut();
+			jQuery(".preloader").delay(1000).fadeOut("slow");
+
 			} else {
 				$('#header .header-inner').removeClass("sticky");
 			}
